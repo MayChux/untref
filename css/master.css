@@ -3,12 +3,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 img{
     width: 100%;
 }
 ul{
     list-style-type: none;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /*=== Aplicando CSS al encabezado===*/
@@ -58,8 +63,28 @@ ul{
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
+    /*=== Aplicando CSS al Footer
+    pie pagina tiene 3 cajas, los 3 divs , en una tablet lo queremos ver una al lado del otro, 
+    1fr 2fr y 1fr es par que el del medio quede mas grande
+    justify items centra item en horizontal
+    aligne itmen centra en vertical ===*/
+    #piePagina{
+    display: grid ;
+    grid-template-columns: 1fr 2fr 1fr 0.5fr;
+    justify-items: center;
+    align-items: center;
+    background-color: violet;
+    color: blueviolet;
+    }
+    #redesSociales{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) ;
+        gap: 10px; /*gap es espacio entre columnas*/
+    }
 
-
+    ion-icon{
+        color: blueviolet;
+        font-size:large;    }
 }
 /*X-Large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
